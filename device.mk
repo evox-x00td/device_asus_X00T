@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
+    libqdutils \
     libhwbinder \
     libhwbinder.vendor
 
