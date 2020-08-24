@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/conquer_X00T.mk
+    $(LOCAL_DIR)/aosp_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    conquer_X00T-user \
-    conquer_X00T-userdebug \
-    conquer_X00T-eng
+    aosp_X00T-user \
+    aosp_X00T-userdebug \
+    aosp_X00T-eng
