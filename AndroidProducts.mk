@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/conquer_X00T.mk
+    $(LOCAL_DIR)/bootleg_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    conquer_X00T-user \
-    conquer_X00T-userdebug \
-    conquer_X00T-eng
+    bootleg_X00T-user \
+    bootleg_X00T-userdebug \
+    bootleg_X00T-eng
