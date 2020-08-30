@@ -25,10 +25,10 @@ $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+PRODUCT_NAME := bootleg_X00T
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00T
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := bootleg_X00T
 PRODUCT_MODEL := ZenFone Max Pro M1
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
@@ -36,10 +36,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-asus
 TARGET_VENDOR := asus
 TARGET_VENDOR_PRODUCT_NAME := X00T
 
-#Conquer stuff
-TARGET_BOOT_ANIMATION_RES = 1080
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="X00T" \
+    TARGET_DEVICE="X00T" \
     PRIVATE_BUILD_DESC="coral-user 10 QQ3A.200705.005 6506677 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
@@ -47,10 +46,4 @@ BUILD_FINGERPRINT := google/coral/coral:10/QQ3A.200705.002/6506677:user/release-
 
 # The following system and vendor props will be set by vendor init
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
-    ro.product.name \
     ro.product.model
-
-PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
-    ro.vendor.product.device \
-    ro.vendor.product.name \
-    ro.vendor.product.model
