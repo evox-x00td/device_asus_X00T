@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleg_X00T.mk
+    $(LOCAL_DIR)/p404_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleg_X00T-user \
-    bootleg_X00T-userdebug \
-    bootleg_X00T-eng
+    p404_X00T-user \
+    p404_X00T-userdebug \
+    p404_X00T-eng
