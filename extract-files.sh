@@ -59,7 +59,18 @@ if [ -z "${SRC}" ]; then
     SRC=adb
 fi
 
-# Initialize the helper
+function blob_fixup() {
+    case "${1}" in
+    product/lib64/libcutils-v29.so)
+        patchelf --set-soname libcutils-v29.so "$2"
+        ;;
+    product/lib64/libdpmframework.so)
+        patchelf --replace-needed libcutils.so libcutils-v29.so "$2"
+        ;;
+    esac
+}
+
+#Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
