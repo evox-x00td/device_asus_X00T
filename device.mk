@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
+    libhwbinder \
     libhwbinder.vendor
 
 # Bluetooth
